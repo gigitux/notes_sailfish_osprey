@@ -1,7 +1,7 @@
 # notes_sailfish_osprey
 #fix build hal 
 add another repo to kss: <br>
-http://repo.merproject.org/obs/home:/mal:/testing2/sailfishos_latest_armv7hl/
+http://repo.merproject.org/obs/home:/mal:/testing2/sailfishos_latest_armv7hl/ <br>
 cd hybris/droid-hal-version-$DEVICE <br>
 ARCH=armv7hl <br>
 LOCAL_REPO=$ANDROID_ROOT/droid-local-repo/$DEVICE/ <br>
