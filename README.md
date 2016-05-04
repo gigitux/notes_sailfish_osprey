@@ -13,3 +13,10 @@ mb2 -t $VENDOR-$DEVICE-$ARCH \ <br>
  createrepo $LOCAL_REPO <br>
  sb2 -t $VENDOR-$DEVICE-$ARCH -R -m sdk-install \ <br>
  zypper ref <br>
+________________________________________
+edit udev rules <br>
+edit /lib/udev/rules.d/998-droid-system.rules <br>
+
+last line <br>:
+
+ENV{ID_PART_ENTRY_SCHEME}=="gpt", ENV{ID_PART_ENTRY_NAME}=="?*", IMPORT{program}="/bin/sh /lib/udev/platform-device $env{DEVPATH}", SYMLINK+="block/bootdevice/by-name/$env{ID_PART_ENTRY_NAME}"
